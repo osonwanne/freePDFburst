@@ -137,13 +137,14 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'freePDFburst/static'),
 ]
 
-# STATIC_URL = '/'+STATICFILES_DIRS[0]+'/'
+#email settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'mail.school-lms.site'
-# EMAIL_USE_TLS = False
 EMAIL_PORT = config('EMAIL_PORT', cast=int)
+EMAIL_HOST = config('EMAIL_HOST')
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+EMAIL_USE_TLS = config('EMAIL_USE_TLS', default=True, cast=bool)
+
 
 MESSAGE_TAGS = {
     messages.DEBUG: 'alert-info',
