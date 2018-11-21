@@ -32,7 +32,7 @@ def index(request):
 def get_email_message(pdf_to_be_split, recipient_list):
     subject = 'Test'
     body = 'Hello,\n\nThis is an automated email message.\n\nPlease see attached.'
-    from_email = 'info@school-lms.site'
+    from_email = 'no-reply@freepdfburst.com'
     to_email = recipient_list
     infile = PdfFileReader(pdf_to_be_split)
     total_pages = infile.getNumPages()
@@ -63,4 +63,4 @@ def get_email_message(pdf_to_be_split, recipient_list):
     for file in attached_files:
         os.remove(file)
 
-    return 'aaa'
+    return True
