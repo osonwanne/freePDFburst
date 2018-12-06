@@ -31,7 +31,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['freepdfburst.com', 'www.freepdfburst.com']
+ALLOWED_HOSTS = ['142.93.58.227', 'freepdfburst.com', 'www.freepdfburst.com']
 
 
 # Application definition
